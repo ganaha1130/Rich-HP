@@ -75,18 +75,23 @@ body{
   max-height: 500px;
   width: 100%;
   overflow: hidden;
-  display: inline-block;
+  position: relative; /* 子要素に対する相対位置を確立 */
 }
 .hero img{
   height: auto;
 	width: 100%;
 }
 .text{
-  padding-left: 30px;
-
-  
+  position: absolute; /* テキストコンテナを.hero divに対して相対配置 */
+  top: 50%; /* テキストを垂直に中央配置（必要に応じて調整） */
+  left: 50%; /* テキストを水平に中央配置（必要に応じて調整） */
+  transform: translate(-50%, -50%); /* transformを使用してテキストを中央配置 */
+  text-align: center; /* テキストを中央揃えにする */
+  background: rgba(0, 0, 0, 0.7); /* 透明度を持つ背景色を設定 */
+  padding: 20px; /* テキストコンテナに余白を追加 */
+  color: #fff; /* テキストの色 */
+  font-family: 'Oswald.ttf', sans-serif;
 }
-
 .copyright {
   font-size: 15px;
   font-family: 'Titillium Web', sans-serif;
